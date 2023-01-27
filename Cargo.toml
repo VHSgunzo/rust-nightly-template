@@ -1,0 +1,14 @@
+[package]
+name = "template"
+version = "0.0.1"
+readme = "README.md"
+license-file = "LICENSE"
+repository = "https://github.com/VHSgunzo/template"
+description = "Rust nightly template x86_64-unknown-linux-musl"
+
+[profile.release]
+lto = true
+panic = "abort"
+opt-level = "z"
+strip = "symbols"
+codegen-units = 1
