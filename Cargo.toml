@@ -1,6 +1,8 @@
+cargo-features = ["panic-immediate-abort"]
+
 [package]
 name = "template"
-version = "0.0.1"
+version = "0.0.2"
 readme = "README.md"
 license = "MIT"
 repository = "https://github.com/VHSgunzo/template"
@@ -9,12 +11,11 @@ edition = "2021"
 
 [profile.release]
 lto = true
-panic = "abort"
 opt-level = "z"
 strip = "symbols"
 debug  = false
 codegen-units = 1
+panic = "immediate-abort"
 
 [profile.dev]
-panic = "abort"
 opt-level = 0
